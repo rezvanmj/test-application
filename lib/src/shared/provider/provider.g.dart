@@ -22,7 +22,7 @@ final httpProvider = AutoDisposeProvider<Dio>.internal(
 @Deprecated('Will be removed in 3.0. Use Ref instead')
 // ignore: unused_element
 typedef HttpRef = AutoDisposeProviderRef<Dio>;
-String _$dummyInterceptorHash() => r'8cfbe0dfbb6b9be7ebc775928615882b27412ba6';
+String _$dummyInterceptorHash() => r'c110f7b0e5b867b6d032d794a48772dec0605258';
 
 /// See also [dummyInterceptor].
 @ProviderFor(dummyInterceptor)

@@ -46,7 +46,9 @@ dependencies:
   riverpod_generator: ^2.6.4
   freezed: ^2.5.8
   json_serializable: ^6.9.3
-#  either_dart: ^1.0.0
+  flutter_hooks: ^0.20.5
+  retrofit_generator: ^9.1.7
+
 
 
 dev_dependencies:
