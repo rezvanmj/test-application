@@ -35,7 +35,7 @@ class ExamList extends ConsumerWidget {
     return Expanded(
         child: Container(
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.only(topLeft: Radius.circular(20) , topRight: Radius.circular(20)),
+              borderRadius: BorderRadius.only(topLeft: Radius.circular(30) , topRight: Radius.circular(30)),
               color: Theme.of(context).indicatorColor
           ),
           child: TabBarWidget(initialIndex: 0),
@@ -45,7 +45,7 @@ class ExamList extends ConsumerWidget {
 
   Widget _header(BuildContext context) {
     return Padding(
-        padding: const EdgeInsets.all(17.0),
+        padding: const EdgeInsets.symmetric(vertical: 17.0),
         child: Column(
           children: [
             CustomSpace(height: 17),

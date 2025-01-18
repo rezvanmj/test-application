@@ -5,17 +5,17 @@ import 'package:test_flutter_project/core/images/custom_images.dart';
 class SearchBarWidget extends StatelessWidget {
    SearchBarWidget({super.key});
 
-  TextEditingController searchController =TextEditingController();
+  final TextEditingController searchController =TextEditingController();
 
 
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+      margin: const EdgeInsets.symmetric(horizontal: 16),
       decoration: BoxDecoration(
         color: Colors.grey.shade200,
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(30),
       ),
       child: TextField(
         controller: searchController,
