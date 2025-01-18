@@ -32,25 +32,7 @@ final ThemeData appThemeData = ThemeData(
     labelMedium:
         CustomStyles.bodySmall2.copyWith(color: CustomColors.textColor),
     labelSmall: CustomStyles.bodySmall3.copyWith(color: CustomColors.textColor),
-// caption: CustomStyles.caption1,
-// bodyText1: CustomStyles.caption2
+
   ),
-  // colorScheme: const ColorScheme.light(
-  //   primaryContainer: CustomColors.grayText,
-  //   onSecondaryContainer: CustomColors.grayDark,
-  //   secondaryContainer: CustomColors.darkLighterr,
-  //   shadow: CustomColors.gray,
-  //   outline: CustomColors.grayDark,
-  //   brightness: Brightness.light,
-  //   error: CustomColors.error,
-  //   onError: CustomColors.textColor,
-  //   primary: CustomColors.blue,
-  //   onPrimary: CustomColors.gray, //input texts
-  //   secondary: CustomColors.gray,
-  //   onSecondary: CustomColors.textColor,
-  //   tertiary: CustomColors.lightSkyBlue,
-  //   onTertiary: CustomColors.textColor,
-  //   surface: CustomColors.yellowLightest,
-  //   onSurface: CustomColors.gray,
-  // ),
+
 );

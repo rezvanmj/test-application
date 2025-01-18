@@ -14,7 +14,7 @@ class ExamDataSourceImpl implements ExamDataSource {
   @override
   Future<List<ExamModel>> getExamList({required int page, String? searchQuery, String? lessonId}) {
 
-   return  _service.getExamList(page: page, limit: 10 , search: searchQuery , lessonId: lessonId) ;
+   return  _service.getExamList(page: page, limit: AppValues.limitExamList , search: searchQuery , lessonId: lessonId) ;
   }
 }
 

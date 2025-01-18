@@ -3,12 +3,7 @@ import 'package:test_flutter_project/core/colors/custom_colors.dart';
 
 
 class CustomStyles {
-  // static TextStyle headline1 = const TextStyle(
-  //     color: CustomColors.textColor,
-  //     fontWeight: FontWeight.w300,
-  //     fontStyle: FontStyle.normal,
-  //     letterSpacing: -2,
-  //     fontSize: 28.0);
+
 
   static TextStyle headline2 = TextStyle(
     //headline Large

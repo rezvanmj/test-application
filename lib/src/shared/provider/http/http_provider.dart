@@ -41,6 +41,7 @@ InterceptorsWrapper dummyInterceptor(Ref ref) {
     onResponse: (options, handler) => handler.next(options),
     onError: (error, handler) {
       log('ERROR : $error');
+
       handler.next(error);
     },
   );

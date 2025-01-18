@@ -2,12 +2,8 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:shamsi_date/shamsi_date.dart';
-import 'package:test_flutter_project/core/colors/custom_colors.dart';
 import 'package:test_flutter_project/core/images/custom_images.dart';
 import 'package:test_flutter_project/core/utils/utils.dart';
-import 'package:test_flutter_project/src/data/model/exam/exam_model.dart';
 import 'package:test_flutter_project/src/domain/entity/exam/exam_entity.dart';
 import 'package:test_flutter_project/src/presentation/widget/exam/custom_progressbar.dart';
 import 'package:test_flutter_project/src/shared/widget/custom_space.dart';
@@ -52,8 +48,7 @@ class ExamItem extends StatelessWidget {
 
   Widget _examDetail(BuildContext context) {
     int durationStartTillNow = Utils.calculateDuration(DateTime.parse(examItem.startDate ?? DateTime.now().toString()));
-    int durationStartTillEnd = 100;
-   log('total : $durationStartTillEnd  val is : $durationStartTillNow' );
+    int durationStartTillEnd = 100; //an example of duration between start and end day
 
     return Row(
       mainAxisAlignment: MainAxisAlignment.start,

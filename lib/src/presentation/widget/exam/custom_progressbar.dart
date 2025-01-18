@@ -29,6 +29,7 @@ class CustomProgressbar extends StatelessWidget {
 
   Widget _centerSvg(BuildContext context) {
     return Container(
+
             decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 color: Theme.of(context).indicatorColor

@@ -9,7 +9,7 @@ class ExamRepositoryImpl implements ExamsRepository {
   @override
   Future<List<ExamEntity>> getExamList({required int page , String? searchQuery , String? lessonId }) async {
     final List<ExamEntity> list = await _source.getExamList(page: page , lessonId: lessonId , searchQuery:  searchQuery);
-    return list;  //TODO DYNAMIC LIST
+    return list;
   }
 }
 

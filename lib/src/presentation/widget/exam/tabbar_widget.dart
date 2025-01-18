@@ -47,7 +47,7 @@ class _TabBarWidgetState extends ConsumerState<TabBarWidget>
 
   @override
   Widget build(BuildContext context) {
-    // Watch the tab index state
+
 
     return Consumer(
       builder:(context , ref , _ ) {

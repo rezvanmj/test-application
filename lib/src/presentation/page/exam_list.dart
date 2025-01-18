@@ -4,7 +4,8 @@ import 'package:test_flutter_project/src/presentation/controller/controller.dart
 import 'package:test_flutter_project/src/presentation/widget/exam/search_bar_widget.dart';
 import 'package:test_flutter_project/src/presentation/widget/exam/tabbar_widget.dart';
 
-import '../controller/exam/exams_list_controller.dart';
+import '../../shared/widget/custom_space.dart';
+
 
 class ExamList extends ConsumerWidget {
   const ExamList({super.key});
@@ -25,13 +26,12 @@ class ExamList extends ConsumerWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         _header(context) ,
-
-        _tab(context)
+        _tabs(context)
       ],
     );
   }
 
-  Widget _tab(BuildContext context) {
+  Widget _tabs(BuildContext context) {
     return Expanded(
         child: Container(
           decoration: BoxDecoration(
@@ -47,9 +47,10 @@ class ExamList extends ConsumerWidget {
     return Padding(
         padding: const EdgeInsets.all(17.0),
         child: Column(
-          children: [    _verticalSpace(),
+          children: [
+            CustomSpace(height: 17),
             _examTitle(context),
-            _verticalSpace(),
+            CustomSpace(height: 17),
             SearchBarWidget(),],
         ),
       );
@@ -66,7 +67,5 @@ class ExamList extends ConsumerWidget {
                 ));
   }
 
-  Widget _verticalSpace() => SizedBox(
-        height: 17,
-      );
+
 }
