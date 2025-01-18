@@ -4,6 +4,7 @@ import 'package:test_flutter_project/src/domain/entity/exam/exam_entity.dart';
 import 'package:test_flutter_project/src/presentation/widget/exam/exam_item.dart';
 import 'package:test_flutter_project/src/shared/widget/custom_empty_widget.dart';
 import 'package:test_flutter_project/src/shared/widget/custom_error_widget.dart';
+import 'package:test_flutter_project/src/shared/widget/custom_space.dart';
 
 import '../../controller/controller.dart';
 
@@ -28,6 +29,7 @@ class ExamListView extends ConsumerWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             CustomErrorWidget(),
+            CustomSpace(height: 3,),
             GestureDetector(
                 onTap: () {
                   ref
