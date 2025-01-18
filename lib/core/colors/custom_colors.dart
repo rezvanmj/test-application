@@ -7,5 +7,8 @@ class CustomColors {
   static const background = Color(0xFFF2F7FB);
   static const lightBlue = Color(0xFFF2F7FB);
   static const textColor = Color(0xFF17336B);
+  static const errorColor = Color(0xFFD01414);
+  static const warningColor = Color(0xFFFF8946);
+  static const ocean = Color(0xFF0F7D69);
 
 }

@@ -94,16 +94,15 @@ class _ExamService implements ExamService {
     String? search,
   }) async {
     final _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{
+      r'page': page,
+      r'limit': limit,
+      r'lessonId': lessonId,
+      r'search': search,
+    };
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
-    final _data = {
-      'page': page,
-      'limit': limit,
-      'lessonId': lessonId,
-      'search': search,
-    };
-    _data.removeWhere((k, v) => v == null);
+    const Map<String, dynamic>? _data = null;
     final _options = _setStreamType<List<ExamModel>>(
       Options(method: 'GET', headers: _headers, extra: _extra)
           .compose(

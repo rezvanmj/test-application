@@ -50,6 +50,9 @@ dependencies:
   riverpod_lint: ^2.6.4
   retrofit_generator: ^9.1.7
   flutter_svg: ^2.0.17
+  either_dart: ^1.0.0
+  percent_indicator: ^4.2.4
+  shamsi_date: ^1.0.4
 
 
 dev_dependencies:

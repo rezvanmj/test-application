@@ -7,6 +7,7 @@ final ThemeData appThemeData = ThemeData(
   cardColor: CustomColors.white,
   scaffoldBackgroundColor: CustomColors.background,
   indicatorColor: CustomColors.lightBlue,
+  splashColor: CustomColors.ocean,
 
   textTheme: TextTheme(
     headlineLarge:

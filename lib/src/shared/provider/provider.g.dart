@@ -6,7 +6,7 @@ part of 'provider.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$httpHash() => r'a41fdc123ea5a034a7b40d74d864f9abfe02e11b';
+String _$httpHash() => r'8d323161e06bc3fcffa77a98a372e1649b0427bf';
 
 /// See also [http].
 @ProviderFor(http)
@@ -22,7 +22,7 @@ final httpProvider = AutoDisposeProvider<Dio>.internal(
 @Deprecated('Will be removed in 3.0. Use Ref instead')
 // ignore: unused_element
 typedef HttpRef = AutoDisposeProviderRef<Dio>;
-String _$dummyInterceptorHash() => r'c110f7b0e5b867b6d032d794a48772dec0605258';
+String _$dummyInterceptorHash() => r'46f575a0844af072c0f7fc50e00c650a71269075';
 
 /// See also [dummyInterceptor].
 @ProviderFor(dummyInterceptor)

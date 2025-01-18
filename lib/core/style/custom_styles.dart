@@ -99,13 +99,13 @@ class CustomStyles {
       letterSpacing: -0.24,
       fontSize: 16.0);
 
-  static TextStyle body3 = TextStyle(
+  static TextStyle body3 = TextStyle (// blue text
       color: CustomColors.textColor,
       fontWeight: FontWeight.w400,
       fontFamily:  'IranSans',
       fontStyle: FontStyle.normal,
       letterSpacing: -0.24,
-      fontSize: 15.0);
+      fontSize: 10.0);
 
   static TextStyle bodySmall1 = TextStyle(
       color: CustomColors.textColor,

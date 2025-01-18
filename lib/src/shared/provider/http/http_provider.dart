@@ -1,14 +1,31 @@
 part of '../provider.dart';
-
+String token = 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZWN0aW9uIjo0NDMsInV1aWQiOiJiNDAyNjU4Yy00NWIxLTQ3YzctOWI2Ny1mOGE3OWVkN2IxN2YiLCJpYXQiOjE3MzcyMDk0OTAsImV4cCI6MTczNzI1MjY5MH0.cYEB1ZGYcDR2xLmeTNGvwWBPuk5MYWctNMCUi_tpEMQ';
 @riverpod
 Dio http(Ref ref) {
   final options = BaseOptions(
     baseUrl: 'https://api.erfanm.com/',
+    headers: {
+      'Authorization' : token ,
+      'Content-Type' : 'application/json',
+      'Accept' : 'application/json'
+    },
     responseType: ResponseType.json,
-    connectTimeout: const Duration(milliseconds: 3000),
-    receiveTimeout: const Duration(milliseconds: 3000),
+    connectTimeout: const Duration(seconds: 30),
+    receiveTimeout: const Duration(seconds: 30),
   );
-  return Dio(options)
+
+
+  Dio dio = Dio(options);
+
+  dio.interceptors.add(LogInterceptor(
+    responseBody: true,
+    requestBody: true,
+    request: true,
+    responseHeader: true,
+    error: true,
+  ));
+
+  return dio
     ..interceptors.addAll([
       ref.watch(dummyInterceptorProvider),
     ]);
@@ -18,13 +35,15 @@ Dio http(Ref ref) {
 InterceptorsWrapper dummyInterceptor(Ref ref) {
   return InterceptorsWrapper(
     onRequest: (options, handler) {
-      // TODO: token interceptor
-      options.headers['Authorization']='JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzZWN0aW9uIjo0MzMsInV1aWQiOiI0MTk1NWRiZi0zMzY3LTRlOWMtYTMwYS0zM2QwZGNkNGIzMTYiLCJpYXQiOjE3MzcxOTQyMjEsImV4cCI6MTczOTc4NjIyMX0.KsIFa_0Ia56myP4XYkbkDrVh1HjDxER_GArHXoUX5n8';
+      options.headers.addAll({"Authorization" : token}) ;
       handler.next(options);
     },
     onResponse: (options, handler) => handler.next(options),
     onError: (error, handler) {
-      handler.next(error); 
+      log('ERROR : $error');
+      handler.next(error);
     },
   );
+
+
 }
