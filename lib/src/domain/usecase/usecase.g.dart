@@ -6,7 +6,7 @@ part of 'usecase.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$getExamUseCaseHash() => r'fb559765a619f9a7bf0809fa94654a975e736bf3';
+String _$getExamUseCaseHash() => r'0f3cc901c8f3e5a4efc13a6cb60010a939dfaed4';
 
 /// Copied from Dart SDK
 class _SystemHash {

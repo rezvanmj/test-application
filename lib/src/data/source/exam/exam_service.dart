@@ -8,9 +8,9 @@ abstract class ExamService {
 
   @GET('exam')
   Future<List<ExamModel>> getExamList({
-    @Field('page') required int page,
-    @Field('limit') required int limit,
-    @Field('lessonId')  String? lessonId,
-    @Field('search')  String? search,
+    @Query('page') required int page,
+    @Query('limit') required int limit,
+    @Query('lessonId')  String? lessonId,
+    @Query('search')  String? search,
   });
 }

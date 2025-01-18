@@ -9,6 +9,8 @@ class ExamListController extends _$ExamListController {
 
   Future<ExamListState> _fetchData({required int page , String?searchQuery , String? lessonId }) async {
     final List<ExamEntity> exams = await ref.watch(getExamUseCaseProvider( page: page , searchQuery:searchQuery , lessonId: lessonId ).future);
+    log('exams : $exams');
+
     return ExamListState( exams: exams);
   }
 }
